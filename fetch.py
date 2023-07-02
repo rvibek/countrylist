@@ -1,6 +1,7 @@
 import requests
 import csv
 from datetime import datetime
+import json
 
 # Define URL and headers
 url = "https://api.datawrapper.de/v3/charts/SeEnU/data"
