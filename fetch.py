@@ -11,14 +11,21 @@ headers = {'Authorization': 'Bearer 1LeiLX5fjdzFsAeAZhgzV1F04ispFRsj0KCAAOuIHwFS
 response = requests.request("GET", url, headers=headers)
 data = response.content.decode('utf-8')
 
-# Write data
+# Generate data
 def latest_update():
+    # Write CSV
     filename = "countrylist.csv"
     with open(filename, "w", newline='') as file:
         writer = csv.writer(file)
         reader = csv.reader(data.splitlines())
         for row in reader:
             writer.writerow(row)
+    # Write JSON
+    filename = "countrylist.json"
+    rows = data.splitlines()
+    iso3 = rows[1].strip('"').split(', ')
+    with open(filename, "w") as file:
+        json.dump(json_data, file)
 
 def historical_update():
     filename = "countrylist_historical.csv"
