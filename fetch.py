@@ -27,7 +27,7 @@ def latest_update():
     iso3 = rows[1].strip('"').split(', ')
     json_data = {'ISO3': iso3}
     with open(filename, "w") as file:
-        json.dump(json_data, filename)
+        json.dump(json_data, file)
 
 def historical_update():
     filename = "countrylist_historical.csv"
