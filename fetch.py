@@ -45,4 +45,4 @@ def historical_update():
 
 # latest_update()
 # historical_update()
-print(headers)
+print(data)
