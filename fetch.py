@@ -2,10 +2,13 @@ import requests
 import csv
 from datetime import datetime
 import json
+import os
+
+auth_key = os.environ.get('AUTHKEY')
 
 # Define URL and headers
 url = "https://api.datawrapper.de/v3/charts/SeEnU/data"
-headers = {'Authorization': 'Bearer 1LeiLX5fjdzFsAeAZhgzV1F04ispFRsj0KCAAOuIHwFS5s7xz85Hr4Z3wlBtLwTT'}
+headers = {'Authorization': 'Bearer {auth_key}'}
 
 
 # Fetch data
