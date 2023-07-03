@@ -8,7 +8,7 @@ auth_key = os.environ.get('AUTHKEY')
 
 # Define URL and headers
 url = "https://api.datawrapper.de/v3/charts/SeEnU/data"
-headers = {'Authorization': 'Bearer {auth_key}'}
+headers = {'Authorization': f'Bearer {auth_key}'}
 
 
 # Fetch data
