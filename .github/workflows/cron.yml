@@ -29,6 +29,7 @@ jobs:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+          AUTHKEY: ${{ secrets.AUTHKEY }}
         run: python fetch.py
 
       - name: Commit and push CSV files
