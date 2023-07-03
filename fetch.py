@@ -43,6 +43,6 @@ def historical_update():
             writer.writerow([timestamp] + row)  # Add the timestamp as the first column in each row
 
 
-# latest_update()
-# historical_update()
-print(data)
+latest_update()
+historical_update()
+# print(data)
